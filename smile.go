@@ -2,16 +2,12 @@ package main
 
 import "fmt"
 
+func main() {
+	var mobileNum interface{} = int64(8073215402)
 
-func main(){
-	wilson("Yathish",24)
-	price("Laptop",50000)
-}
-
-func wilson(name string, age int32){
-	fmt.Printf("Hi my name is %v and i am %v years old",name,age)
-}
-
-func price(product string, price int32){
-	fmt.Printf("The price of %v is %v",product,price)
+	if num, ok := mobileNum.(int64); ok {
+		fmt.Println("Mobile number is valid:", num)
+	} else {
+		fmt.Println("Mobile number is not valid")
+	}
 }
